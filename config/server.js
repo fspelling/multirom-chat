@@ -15,7 +15,7 @@ app.use(validator());
 consign()
     .include('app/routes')
     .then('app/models')
-    .then('app/contollers')
+    .then('app/controllers')
     .into(app);
 
 module.exports = app;
