@@ -16,7 +16,8 @@ io.on('connection', function (conSocket) {
         console.log('servidor socket fora');
     });
 
-    io.on('msgParaServidor', function (dados) {
+    conSocket.on('msgParaServidor', function (dados) {
+        console.log('test');
         io.emit('msgParaCliente', dados);
         io.broadcast.emit('msgParaCliente', dados);
 
